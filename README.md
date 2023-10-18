@@ -20,11 +20,9 @@ SUBSYSTEM=="backlight", ACTION=="add", \
 sudo usermod -a -G GRUPO usuario
 ```
 
-Reemplaza `tu_usuario` con tu nombre de usuario.
-
 3. Reinicia tu sistema para que los cambios surtan efecto.
 
-Esto permitirá a cualquier usuario en el grupo `video` ajustar el brillo sin necesidad de `sudo`. Ahora deberías poder usar `light` en tu configuración de `sxhkd` sin problemas.
+Esto permitirá a cualquier usuario en el grupo antes configurado ajustar el brillo sin necesidad de `sudo`. Ahora deberías poder usar `light` en tu configuración de `sxhkd` sin problemas.
 
 ### Paletas de colores
 ##### Nord
