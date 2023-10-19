@@ -1,10 +1,14 @@
 # dotfiles
 BspWM
 
-# Sistema
-### Controles
-##### Control de brillo
-###### Ajustes previos para que funcione el script `~/.config/bspwm/scripts/bl`
+# Ajustes del sistema
+#### Conexion Wifi
+No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes.
+
+https://github.com/defname/rofi-iwd-wifi-menu
+
+#### Control de brillo
+##### Ajustes previos para que funcione el script `~/.config/bspwm/scripts/bl`
 Para evitar tener que ejecutar `light` con `sudo` es cambiar los permisos del archivo de dispositivo que `light` utiliza para ajustar el brillo. Esto se puede hacer con una regla `udev`.
 
 1. Crea un archivo llamado `90-backlight.rules` en el directorio `/etc/udev/rules.d/` con el siguiente contenido (no olvides que el grupo por defecto para `/sys/class/backlight/%k/brightness` es `video`):
