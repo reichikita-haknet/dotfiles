@@ -57,3 +57,16 @@ https://github.com/xero/figlet-fonts
 ```
 sudo cp Descargas/figlet-fonts/3d.flf /usr/share/figlet/fonts/
 ```
+
+# Errores comunes
+##### Pulseaudio
+A veces se para el demonio `pulseaudio`, para solucionarlo solo reinicialo
+
+1. Verifica si alguna instancia de PulseAudio está en ejecución: `pulseaudio --check`. Normalmente no imprime nada, solo el código de salida. 0 significa que está en ejecución¹.
+2. Si alguna instancia está en ejecución, mátala: `pulseaudio -k`¹.
+3. Finalmente, inicia PulseAudio nuevamente como un demonio: `pulseaudio -D`¹.
+
+Alternativamente, puedes usar systemctl para reiniciar PulseAudio:
+
+1. Reinicia el servicio PulseAudio: `systemctl --user restart pulseaudio.service`¹.
+2. También puedes reiniciar el socket PulseAudio: `systemctl --user restart pulseaudio.socket`¹.
