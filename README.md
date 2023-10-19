@@ -5,7 +5,12 @@ BspWM
 #### Conexion Wifi
 No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes.
 
-Para utilizar iwd (iNet wireless daemon), un demonio para administrar las conexiones de red inalámbricas, generalmente necesitarás permisos de superusuario. Esto se debe a que la gestión de las conexiones de red es una operación que puede afectar a todo el sistema.
+Para utilizar iwd (iNet wireless daemon), un demonio para administrar las conexiones de red inalámbricas, generalmente necesitarás permisos de superusuario. Esto se debe a que la gestión de las conexiones de red es una operación que puede afectar a todo el sistema. 
+
+Sin embargo para el siguiente script de control de wifi es imperativo que no necesites de `sudo` para ejecutar `iwd` porque vamos a usarlo con `sxhkd`, por lo que debes agregar tu usuario al grupo `wheel` ya que solo los usuarios de ese grupo pueden interactuar con `iwd`:
+```
+sudo usermod -a -G wheel usuario
+```
 
 https://github.com/defname/rofi-iwd-wifi-menu
 
