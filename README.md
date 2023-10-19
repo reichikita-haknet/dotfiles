@@ -4,9 +4,10 @@ BspWM
 # Sistema
 ### Controles
 ##### Control de brillo
-Una alternativa para evitar tener que ejecutar `light` con `sudo` es cambiar los permisos del archivo de dispositivo que `light` utiliza para ajustar el brillo. Esto se puede hacer con una regla `udev`.
+###### Ajustes previos para que funcione el script `~/.config/bspwm/scripts/bl`
+Para evitar tener que ejecutar `light` con `sudo` es cambiar los permisos del archivo de dispositivo que `light` utiliza para ajustar el brillo. Esto se puede hacer con una regla `udev`.
 
-1. Crea un archivo llamado `90-backlight.rules` en el directorio `/etc/udev/rules.d/` con el siguiente contenido (no olvides que el grupo por defecto para /sys/class/backlight/%k/brightness es `video`):
+1. Crea un archivo llamado `90-backlight.rules` en el directorio `/etc/udev/rules.d/` con el siguiente contenido (no olvides que el grupo por defecto para `/sys/class/backlight/%k/brightness` es `video`):
 
 ```
 SUBSYSTEM=="backlight", ACTION=="add", \
@@ -14,10 +15,15 @@ SUBSYSTEM=="backlight", ACTION=="add", \
   RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness"
 ```
 
-2. Asegúrate de que tu usuario esté en el grupo que configuraste antes. Puedes hacerlo con el siguiente comando:
-
+2. Agrega tu usuario al grupo `video`
 ```
 sudo usermod -a -G video usuario
+```
+
+3. Asegúrate de que tu usuario esté en el grupo que configuraste antes. Puedes hacerlo con el siguiente comando:
+
+```
+groups usuario
 ```
 
 3. Reinicia tu sistema para que los cambios surtan efecto.
