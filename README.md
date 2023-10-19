@@ -3,14 +3,21 @@ BspWM
 
 # Ajustes del sistema
 #### Conexion Wifi
-No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes.
+1. No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes:
+```
+sudo pacman -S iwd
+```
 
-Para utilizar iwd (iNet wireless daemon), un demonio para administrar las conexiones de red inalámbricas, generalmente necesitarás permisos de superusuario. Esto se debe a que la gestión de las conexiones de red es una operación que puede afectar a todo el sistema. 
-
-Sin embargo para el siguiente script de control de wifi es imperativo que no necesites de `sudo` para ejecutar `iwd` porque vamos a usarlo con `sxhkd`, por lo que debes agregar tu usuario al grupo `wheel` ya que solo los usuarios de ese grupo pueden interactuar con `iwd`:
+2. Para utilizar iwd (iNet wireless daemon), un demonio para administrar las conexiones de red inalámbricas, generalmente necesitarás permisos de superusuario. Esto se debe a que la gestión de las conexiones de red es una operación que puede afectar a todo el sistema. Sin embargo para el siguiente script de control de wifi es imperativo que no necesites de `sudo` para ejecutar `iwd` porque vamos a usarlo con `sxhkd`, por lo que debes agregar tu usuario al grupo `wheel` ya que solo los usuarios de ese grupo pueden interactuar con `iwd`:
 ```
 sudo usermod -a -G wheel usuario
 ```
+
+3. Para que surta efecto el cambio de paleta de color deberas primero crear un archivo `color.rasi` y cambiar su propiedad a tu usuario:
+```
+sudo touch colors.rasi; sudo chown usuario colors.rasi
+```
+
 
 https://github.com/defname/rofi-iwd-wifi-menu
 
