@@ -1,7 +1,7 @@
 # dotfiles
 BspWM
 
-# Ajustes del sistema
+# Controladores de ajustes del sistema
 #### Conexion Wifi
 1. No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes:
 ```
@@ -21,6 +21,43 @@ sudo touch colors.rasi; sudo chown usuario colors.rasi
 
 https://github.com/defname/rofi-iwd-wifi-menu
 
+#### Conexion bluetooth
+1. Para utilizar el script antes que nada debes activar el servicio bluetooth:
+```
+sudo systemctl enable bluetooth.service
+```
+2. Inicia el servicio Bluetooth:
+```
+sudo systemctl start bluetooth
+```
+
+
+**Si te pasa como a mi que se dificulta conectar el teclado intenta usar `bluetoothctl` y en esa consola haz lo siguiente:**
+
+
+1. Activa el agente y establece como predeterminado: 
+```
+agent on
+default-agent
+```
+2. Escanea dispositivos cercanos: Ahora puedes escanear dispositivos Bluetooth cercanos.
+```
+scan on
+```
+3. Empareja tu dispositivo: Una vez que veas tu dispositivo en la lista, puedes emparejarlo usando su dirección MAC. Recuerda reemplazar <MAC_ADDRESS> con la dirección MAC de tu dispositivo.
+```
+pair <MAC_ADDRESS>
+```
+4. Confirma el emparejamiento: Si todo va bien, se te pedirá que confirmes el emparejamiento en tu dispositivo.
+
+5. Conéctate a tu dispositivo: Una vez emparejado, puedes conectarte a tu dispositivo usando el comando connect.
+```
+connect <MAC_ADDRESS>
+```
+6. Confía en el dispositivo: Para que tu dispositivo se conecte automáticamente en el futuro, puedes usar el comando trust.
+```
+trust <MAC_ADDRESS>
+``` 
 #### Control de brillo
 ##### Ajustes previos para que funcione el script `~/.config/bspwm/scripts/bl`
 Para evitar tener que ejecutar `light` con `sudo` es cambiar los permisos del archivo de dispositivo que `light` utiliza para ajustar el brillo. Esto se puede hacer con una regla `udev`.
