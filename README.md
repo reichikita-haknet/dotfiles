@@ -1,6 +1,10 @@
 # dotfiles
 BspWM
 
+# Instalacion de controladores de NVIDIA
+Sol sigue los 6 primeros pasos en la seccion Instalación de esta guia (lo de mas no me fue necesario hasta el momento): https://wiki.archlinux.org/title/NVIDIA
+
+
 # Controladores de ajustes del sistema
 #### Conexion Wifi
 1. No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes:
