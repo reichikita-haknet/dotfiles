@@ -89,7 +89,7 @@ groups usuario
 
 Esto permitirá a cualquier usuario en el grupo `video` ajustar el brillo sin necesidad de `sudo`. Ahora deberías poder usar `light` en tu configuración de `sxhkd` sin problemas.
 
-### Paletas de colores
+# Paletas de colores
 ##### Nord
 https://www.nordtheme.com/docs/colors-and-palettes
 
@@ -97,6 +97,14 @@ https://www.nordtheme.com/docs/colors-and-palettes
 https://github.com/xero/figlet-fonts
 ```
 sudo cp Descargas/figlet-fonts/3d.flf /usr/share/figlet/fonts/
+```
+# Compositor
+```
+sudo pacman -S picom
+```
+
+```
+cp picom.conf ~/.config/
 ```
 
 # Errores comunes
