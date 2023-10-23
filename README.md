@@ -126,6 +126,17 @@ pipx install grub2-theme-preview
 ```
 Nota: El paquete `qemu-full` en Arch Linux incluye soporte para GUI.
 
+# Consideraciones generales
+
+Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon es que Python está siendo administrado externamente, probablemente por el administrador de paquetes de Arch Linux, pacman.Entonces simplemente:
+
+1. Para instalar paquetes de Python a nivel del sistema, puedes usar `sudo pacman -S python-xyz`, donde `xyz` es el paquete que intentas instalar.
+
+2. Para instalar un paquete de Python que no está empaquetado por Arch, puedes crear un entorno virtual usando `python -m venv path/to/venv`. Luego puedes usar `path/to/venv/bin/python` y `path/to/venv/bin/pip` para instalar paquetes en ese entorno virtual.
+
+3. Si deseas instalar una aplicación de Python que no está empaquetada por Arch, puedes usar `pipx install xyz`, que administrará un entorno virtual para ti. Asegúrate de tener el paquete `python-pipx` instalado a través de pacman.
+
+
 # Errores comunes
 ##### Pulseaudio
 A veces se para el demonio `pulseaudio`, para solucionarlo solo reinicialo
