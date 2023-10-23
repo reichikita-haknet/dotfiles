@@ -2,7 +2,7 @@
 BspWM
 
 # Instalacion de controladores de NVIDIA
-Sol sigue los 6 primeros pasos en la seccion Instalación de esta guia (lo de mas no me fue necesario hasta el momento): https://wiki.archlinux.org/title/NVIDIA
+Simplemente sigue los 6 primeros pasos en la seccion "Instalación" de la siguiente guia (los demas pasos no me fueron necesarios hasta el momento): https://wiki.archlinux.org/title/NVIDIA
 
 
 # Controladores de ajustes del sistema
@@ -49,19 +49,23 @@ default-agent
 scan on
 ```
 3. Empareja tu dispositivo: Una vez que veas tu dispositivo en la lista, puedes emparejarlo usando su dirección MAC. Recuerda reemplazar <MAC_ADDRESS> con la dirección MAC de tu dispositivo.
+   
 ```
 pair <MAC_ADDRESS>
 ```
 4. Confirma el emparejamiento: Si todo va bien, se te pedirá que confirmes el emparejamiento en tu dispositivo.
 
 5. Conéctate a tu dispositivo: Una vez emparejado, puedes conectarte a tu dispositivo usando el comando connect.
+   
 ```
 connect <MAC_ADDRESS>
 ```
 6. Confía en el dispositivo: Para que tu dispositivo se conecte automáticamente en el futuro, puedes usar el comando trust.
+   
 ```
 trust <MAC_ADDRESS>
-``` 
+```
+
 #### Control de brillo
 ##### Ajustes previos para que funcione el script `~/.config/bspwm/scripts/bl`
 Para evitar tener que ejecutar `light` con `sudo` es cambiar los permisos del archivo de dispositivo que `light` utiliza para ajustar el brillo. Esto se puede hacer con una regla `udev`.
@@ -75,6 +79,7 @@ SUBSYSTEM=="backlight", ACTION=="add", \
 ```
 
 2. Agrega tu usuario al grupo `video`
+   
 ```
 sudo usermod -a -G video usuario
 ```
@@ -95,9 +100,11 @@ https://www.nordtheme.com/docs/colors-and-palettes
 
 ##### Figlet
 https://github.com/xero/figlet-fonts
+
 ```
 sudo cp Descargas/figlet-fonts/3d.flf /usr/share/figlet/fonts/
 ```
+
 # Compositor
 ```
 sudo pacman -S picom
@@ -106,6 +113,18 @@ sudo pacman -S picom
 ```
 cp picom.conf ~/.config/
 ```
+
+# GRUB
+Antes que nada realiza una vista previa del tema para GRUB, incluso si es otro tema el que te gustaria usar te recomiendo usar la siguiiente utilidad para no tener que reinciar a cada rato tu PC para mas de revisar tu tema de GRUB, sobre todo si como a mi te gusta hacer modificaciones personales: https://github.com/hartwork/grub2-theme-preview
+
+Aqui como instalar la utilidad antes mencionada:
+
+```diff
+pipx install grub2-theme-preview
+
++sudo pacman -S qemu qemu-full ovmf mtools xorriso
+```
+Nota: El paquete `qemu-full` en Arch Linux incluye soporte para GUI.
 
 # Errores comunes
 ##### Pulseaudio
