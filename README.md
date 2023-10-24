@@ -2,7 +2,39 @@
 BspWM
 
 # Instalacion de controladores de NVIDIA
-Simplemente sigue los 6 primeros pasos en la seccion "Instalación" de la siguiente guia (los demas pasos no me fueron necesarios hasta el momento): https://wiki.archlinux.org/title/NVIDIA
+
+```
+sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+
+sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+
+sudo pacman-key --lsign-key 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+
+sudo pacman-key --finger 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
+
+wget "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x8b15a6b0e9a3fa35" -O g14.sec
+
+sudo pacman-key -a g14.sec
+
+sudo vim /etc/pacman.conf
+
+sudo pacman -Suy
+
+sudo pacman -S asusctl
+
+systemctl enable --now power-profiles-daemon.service
+
+sudo pacman -S supergfxctl rog-control-center
+
+systemctl enable --now supergfxd
+
+sudo pacman -Sy linux-g14 linux-g14-headers
+
+sudo pacman -S nvidia-dkms
+```
+Fuente: https://asus-linux.org/wiki/arch-guide/
+
+Ahora simplemente sigue el paso 5 y 6 primeros de la seccion "Instalación" de la siguiente guia (los demas pasos no me fueron necesarios hasta el momento): https://wiki.archlinux.org/title/NVIDIA
 
 
 # Controladores de ajustes del sistema
