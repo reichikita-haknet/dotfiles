@@ -36,6 +36,7 @@ Fuente: https://asus-linux.org/wiki/arch-guide/
 
 Ahora simplemente sigue el paso 5 y 6 primeros de la seccion "Instalación" de la siguiente guia (los demas pasos no me fueron necesarios hasta el momento): https://wiki.archlinux.org/title/NVIDIA
 
+Finalmente ejecuta **como usuario root** el lanzador de aplicaciones (super + shit + space) el programa rog-control-center para realizar tus ajustes. Puedes revisar tus ajustes en `/etc/asusd/asusd.ron`.
 
 # Controladores de ajustes del sistema
 #### Conexion Wifi
