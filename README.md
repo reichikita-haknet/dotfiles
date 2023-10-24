@@ -1,6 +1,3 @@
-# dotfiles
-BspWM
-
 # Instalacion de controladores de NVIDIA y soporte para Asus en Arch Linux
 
 ```
@@ -127,6 +124,15 @@ groups usuario
 
 Esto permitirá a cualquier usuario en el grupo `video` ajustar el brillo sin necesidad de `sudo`. Ahora deberías poder usar `light` en tu configuración de `sxhkd` sin problemas.
 
+#### Configuracion de mas de un monitor
+Para que no tengas que perder el tiempo ajustando con `xrandr` y `bscp monitor` cada que conectes mas de un monitor hice un script en bash en `~/.config/polybar/scripts/launch.sh` que basicamente hace dos cosas:
+   1. Guarda en la variable `pri` el nombre del monitor principal y en la variable `sec` el nombre del monitor secundario
+   2. Hago uso de un `bloque if` para que si se detecta como conectado solamente al monitor principal, `bspwm` asigne todos los espacios de trabajo a este. Y por otro lado si se detecta como conectado al monitor principal y al monitor secundario, `bspwm` asigne 5 espacios de trabajo para cada uno.
+
+| :warning: Nota |
+|-----------------------|
+| 1. Deberas recargar dos veces `bspwm` cada que conectes y desconectes un monitor secundario.<br/> 2. Si durante la sesion actual de `bspwm` se ha conectado mas de un monitor pero luego lo desconectas para usar solo el monitor principal, se usara `bspc monitor $sec -r` para remover el monitor secundario antes configurado y asi no habra inconvenientes a la hora de asignar todos los espacios de trabajo al monitor principal.|
+
 # Paletas de colores
 ##### Nord
 https://www.nordtheme.com/docs/colors-and-palettes
@@ -160,7 +166,6 @@ pipx install grub2-theme-preview
 Nota: El paquete `qemu-full` en Arch Linux incluye soporte para GUI.
 
 # Consideraciones generales
-
 Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon es que Python está siendo administrado externamente, probablemente por el administrador de paquetes de Arch Linux, pacman.Entonces simplemente:
 
 1. Para instalar paquetes de Python a nivel del sistema, puedes usar `sudo pacman -S python-xyz`, donde `xyz` es el paquete que intentas instalar.
