@@ -1,7 +1,7 @@
 # dotfiles
 BspWM
 
-# Instalacion de controladores de NVIDIA
+# Instalacion de controladores de NVIDIA y soporte para Asus en Arch Linux
 
 ```
 sudo pacman-key --recv-keys 8F654886F17D497FEFE3DB448B15A6B0E9A3FA35
