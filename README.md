@@ -174,6 +174,17 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 
 3. Si deseas instalar una aplicación de Python que no está empaquetada por Arch, puedes usar `pipx install xyz`, que administrará un entorno virtual para ti. Asegúrate de tener el paquete `python-pipx` instalado a través de pacman.
 
+# Aplicaciones
+##### Discord 
+```
+sudo pacman -S discord
+```
+
+Mostrar los emojis en los canales de discord:
+```
+sudo pacman -S noto-fonts-emoji
+```
+Después de instalar la fuente, es posible que necesites reiniciar las aplicaciones para que puedan detectar y usar la nueva fuente
 
 # Errores comunes
 ##### Pulseaudio
