@@ -1,3 +1,11 @@
+## Capturas de pantalla
+<details>
+  <summary>Arch Linux con X server, bspwm y polybar</summary>
+  <img src="" alt="GRUB">
+  <img src="" alt="Monitor principal">
+  <img src="" alt="Monitor secundario">
+</details>
+
 # Instalacion de controladores de NVIDIA y soporte para Asus en Arch Linux
 
 ```
