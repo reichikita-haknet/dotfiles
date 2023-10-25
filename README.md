@@ -1,6 +1,6 @@
 ## Capturas de pantalla
 <details>
-  <summary>Arch Linux con X server, bspwm y polybar</summary>
+  <summary>Arch Linux con XServer, bspwm y polybar</summary>
   <img src="" alt="GRUB">
   <img src="" alt="Monitor principal">
   <img src="" alt="Monitor secundario">
