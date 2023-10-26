@@ -184,23 +184,39 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 
 # Utilidades
 ##### Applio
-Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe`, te veras en la obligacion de instalar una version de python que si lo sea, en este caso `Python3.10`
-```
+Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe`, te veras en la obligacion de instalar una version de python que si lo sea, en este caso `Python3.10` pero como si lo hago puede romperse muchas dependencias del sistema es mucho mejor crear un entorno virtual con la version requerida de Python:
+
+1. Primero, necesitas instalar Python 3.10. Puedes hacerlo con el siguiente comando:
+```bash
 yay -S python310
 ```
 
-Ahora `pip` seguramente no está asociado con la versión correcta de Python, puedes usar el módulo ensurepip para instalarlo:
+2. Luego, debes instalar el paquete `python-virtualenv` si aún no lo has hecho:
+```bash
+sudo pacman -S python-virtualenv
 ```
-python3.10 -m ensurepip
+
+3. Ahora puedes crear un entorno virtual que use Python 3.10 con el siguiente comando:
+```bash
+virtualenv -p /usr/bin/python3.10 nombre_del_entorno
 ```
-Ahora instalamos los modulos de Python necesarios para ejecutar `Applio`:
+Reemplaza `nombre_del_entorno` con el nombre que desees para tu entorno virtual.
+
+4. Para activar el entorno virtual, utiliza el siguiente comando:
+```bash
+source nombre_del_entorno/bin/activate
 ```
-python310 -m pip install -r Applio-RVC-Fork/assets/requirements/requirements.txt
-```
+De nuevo, reemplaza `nombre_del_entorno` con el nombre de tu entorno virtual.
+
+5. Ahora deberías estar en tu entorno virtual y cualquier paquete que instales con `pip` se instalará en este entorno, no en tu sistema global.
+
+
+
+Espero que esto te ayude a configurar tu entorno virtual en Arch Linux utilizando Python 3.10.
 
 | :warning: Nota |
 |-----------------------|
-| Edita el archivo `install.sh` y `go-applio.sh` cambiando todas las coincidencias de `python` por `python3.10` (en la opcion que vayas a usar basta, en mi caso la opcion para usar Nvidia) |
+| 1. Recuerda que siempre debes activar el entorno virtual antes de usarlo y desactivarlo cuando hayas terminado. Puedes desactivar el entorno virtual con simplemente escribir `deactivate` en la terminal. <br/> 2. Si vas instalar con `pip install` en el entorno virtual modulo por modulo ten presente hacerlo con la version especificada en:`assets/requirements/requirements.txt` |
 
 ```
 ./install.sh
