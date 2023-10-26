@@ -188,15 +188,17 @@ Debido a que la versión mas reciente de Python no es compatible con las version
 
 Para instalar específicamente Python 3.9.8 en un entorno virtual en Arch Linux, puedes seguir estos pasos:
 
-1. Primero, debes asegurarte de tener instalado `pyenv`, que es una herramienta que permite manejar múltiples versiones de Python¹. Si no lo tienes instalado, puedes hacerlo con el comando:
+1. Primero, debes asegurarte de tener instalado `pyenv:
 ```
 sudo pacman -S pyenv
 ```
 
-2. Luego, puedes instalar Python 3.9.8 con el comando
+2. `pyenv` descarga un archivo porque es una herramienta de gestión de versiones de Python1. Cuando instalas una versión específica de Python con pyenv, lo que hace es descargar el archivo correspondiente a esa versión desde los repositorios oficiales de Python.
+Una vez descargado, pyenv compila e instala esa versión de Python en un directorio específico dentro del directorio .pyenv en tu directorio personal1. De esta manera, puedes tener múltiples versiones de Python instaladas en tu sistema sin que interfieran entre sí. Puedes instalar Python 3.9.8:
 ```
 pyenv install 3.9.8
 ```
+Simplementa espera unos miutos a que haga todo en segundo plano, y se guardara automaticamente en `~/.pyenv/versions`
 
 3. Después de instalar Python 3.9.8, puedes crear un nuevo entorno virtual con esa versión de Python usando `venv`, que es la herramienta estándar para crear entornos virtuales:
 ```bash
