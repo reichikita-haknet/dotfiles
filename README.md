@@ -200,7 +200,7 @@ python310 -m pip install -r Applio-RVC-Fork/assets/requirements/requirements.txt
 
 | :warning: Nota |
 |-----------------------|
-| Edita el archivo `install.sh` y go-applio.sh` cambiando todas las coincidencias de `python` por `python3.10` (en la opcion que vayas a usar basta, en mi caso la opcion para usar Nvidia) |
+| Edita el archivo `install.sh` y `go-applio.sh` cambiando todas las coincidencias de `python` por `python3.10` (en la opcion que vayas a usar basta, en mi caso la opcion para usar Nvidia) |
 
 ```
 ./install.sh
