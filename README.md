@@ -184,31 +184,38 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 
 # Utilidades
 ##### Applio
-Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe`, te veras en la obligacion de instalar una version de python que si lo sea, en este caso `Python3.10` pero como si lo hago puede romperse muchas dependencias del sistema es mucho mejor crear un entorno virtual con la version requerida de Python:
+Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe` y otras cosas no especificadas, te veras en la obligacion de instalar `Python3.9.8` pero como si lo hago puede romperse muchas dependencias del sistema es mucho mejor crear un entorno virtual con la version requerida de Python:
 
-1. Primero, necesitas instalar Python 3.10. Puedes hacerlo con el siguiente comando:
-```bash
-yay -S python310
+Para instalar específicamente Python 3.9.8 en un entorno virtual en Arch Linux, puedes seguir estos pasos:
+
+1. Primero, debes asegurarte de tener instalado `pyenv`, que es una herramienta que permite manejar múltiples versiones de Python¹. Si no lo tienes instalado, puedes hacerlo con el comando:
+```
+sudo pacman -S pyenv
 ```
 
-2. Luego, debes instalar el paquete `python-virtualenv` si aún no lo has hecho:
+2. Luego, puedes instalar Python 3.9.8 con el comando
+```
+pyenv install 3.9.8
+```
+
+3. Después de instalar Python 3.9.8, puedes crear un nuevo entorno virtual con esa versión de Python usando `venv`, que es la herramienta estándar para crear entornos virtuales:
 ```bash
 sudo pacman -S python-virtualenv
 ```
 
-3. Ahora puedes crear un entorno virtual que use Python 3.10 con el siguiente comando:
+4. Ahora puedes crear un entorno virtual que use Python 3.9.8 con el siguiente comando:
 ```bash
 virtualenv -p /usr/bin/python3.10 nombre_del_entorno
 ```
 Reemplaza `nombre_del_entorno` con el nombre que desees para tu entorno virtual.
 
-4. Para activar el entorno virtual, utiliza el siguiente comando:
+5. Para activar el entorno virtual, utiliza el siguiente comando:
 ```bash
 source nombre_del_entorno/bin/activate
 ```
 De nuevo, reemplaza `nombre_del_entorno` con el nombre de tu entorno virtual.
 
-5. Ahora deberías estar en tu entorno virtual y cualquier paquete que instales con `pip` se instalará en este entorno, no en tu sistema global.
+6. Ahora deberías estar en tu entorno virtual y cualquier paquete que instales con `pip` se instalará en este entorno, no en tu sistema global.
 
 **Si deseas desinstalar** una version especifica de un modulo simplemente incluye `==` seguido de la versión del paquete que deseas desinstalar. Por ejemplo, si deseas desinstalar específicamente la versión 2.1.0 de `torch`, puedes usar el siguiente comando:
 ```
