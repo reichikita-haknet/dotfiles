@@ -217,16 +217,14 @@ pip uninstall torch==2.1.0
 
 | :warning: Nota |
 |-----------------------|
-| 1. Recuerda que siempre debes activar el entorno virtual antes de usarlo y desactivarlo cuando hayas terminado. Puedes desactivar el entorno virtual con simplemente escribir `deactivate` en la terminal. <br/> 2. Si vas instalar con `pip install` en el entorno virtual modulo por modulo ten presente hacerlo con la version especificada en:`assets/requirements/requirements.txt` |
-
-```
-./install.sh
-```
+| 1. No es necesario ejecutar `./install.sh` y no lo hagas o se instalara otra vez cada modulo... <br> 2. Recuerda que siempre debes activar el entorno virtual antes de usarlo y desactivarlo cuando hayas terminado. Puedes desactivar el entorno virtual con simplemente escribir `deactivate` en la terminal. <br/> 3. Si vas instalar con `pip install` en el entorno virtual modulo por modulo ten presente hacerlo con la version especificada en:`assets/requirements/requirements.txt` |
 
 Para ejcutarlo en Linux simplemente usa:
 ```
 ./go-applio.sh
 ```
+##### Separar voz e instrumental de una cancion
+https://vocalremover.org/es/
 
 # Aplicaciones 
 ##### Discord 
