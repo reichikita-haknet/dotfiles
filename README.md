@@ -182,7 +182,23 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 
 3. Si deseas instalar una aplicación de Python que no está empaquetada por Arch, puedes usar `pipx install xyz`, que administrará un entorno virtual para ti. Asegúrate de tener el paquete `python-pipx` instalado a través de pacman.
 
-# Aplicaciones
+# Utilidades
+##### Applio
+Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe`, te veras en la obligacion de instalar una version de python que si lo sea, en este caso `Python3.10`
+```
+yay -S python310
+```
+
+Ahora `pip` seguramente no está asociado con la versión correcta de Python, puedes usar el módulo ensurepip para instalarlo:
+```
+python3.10 -m ensurepip
+```
+Ahora instalamos los modulos de Python necesarios para ejecutar `Applio`:
+```
+python310 -m pip install
+```
+# Aplicaciones 
+
 ##### Discord 
 ```
 sudo pacman -S discord
