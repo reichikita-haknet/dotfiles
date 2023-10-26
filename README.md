@@ -210,9 +210,10 @@ De nuevo, reemplaza `nombre_del_entorno` con el nombre de tu entorno virtual.
 
 5. Ahora deberías estar en tu entorno virtual y cualquier paquete que instales con `pip` se instalará en este entorno, no en tu sistema global.
 
-
-
-Espero que esto te ayude a configurar tu entorno virtual en Arch Linux utilizando Python 3.10.
+**Si deseas desinstalar** una version especifica de un modulo simplemente incluye `==` seguido de la versión del paquete que deseas desinstalar. Por ejemplo, si deseas desinstalar específicamente la versión 2.1.0 de `torch`, puedes usar el siguiente comando:
+```
+pip uninstall torch==2.1.0
+```
 
 | :warning: Nota |
 |-----------------------|
