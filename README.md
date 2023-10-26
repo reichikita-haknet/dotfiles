@@ -195,10 +195,23 @@ python3.10 -m ensurepip
 ```
 Ahora instalamos los modulos de Python necesarios para ejecutar `Applio`:
 ```
-python310 -m pip install
+python310 -m pip install -r Applio-RVC-Fork/assets/requirements/requirements.txt
 ```
-# Aplicaciones 
 
+| :warning: Nota |
+|-----------------------|
+| Edita el archivo `install.sh` y go-applio.sh` cambiando todas las coincidencias de `python` por `python3.10` (en la opcion que vayas a usar basta, en mi caso la opcion para usar Nvidia) |
+
+```
+./install.sh
+```
+
+Para ejcutarlo en Linux simplemente usa:
+```
+./go-applio.sh
+```
+
+# Aplicaciones 
 ##### Discord 
 ```
 sudo pacman -S discord
