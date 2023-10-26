@@ -207,7 +207,7 @@ sudo pacman -S python-virtualenv
 
 4. Ahora puedes crear un entorno virtual que use Python 3.9.8 con el siguiente comando:
 ```bash
-virtualenv -p /usr/bin/python3.10 nombre_del_entorno
+virtualenv -p ~/.pyenv/versions/3.9.8/bin/python3.9 nombre_del_entorno
 ```
 Reemplaza `nombre_del_entorno` con el nombre que desees para tu entorno virtual.
 
