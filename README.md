@@ -228,12 +228,39 @@ pip uninstall torch==2.1.0
 |-----------------------|
 | 1. No es necesario ejecutar `./install.sh` y no lo hagas o se instalara otra vez cada modulo... <br> 2. Recuerda que siempre debes activar el entorno virtual antes de usarlo y desactivarlo cuando hayas terminado. Puedes desactivar el entorno virtual con simplemente escribir `deactivate` en la terminal. <br/> 3. Si vas instalar con `pip install` en el entorno virtual modulo por modulo ten presente hacerlo con la version especificada en:`assets/requirements/requirements.txt` |
 
+Intala especificamente estas versiones de los modulos (como lo pone en `install.sh`):
+```
+pip install torch==2.0.0 torchvision==0.15.1 torchaudio==2.0.1 --index-url https://download.pytorch.org/whl/cu117
+```
+
+Instala todos los demas modulos:
+```
+pip install -r assets/requirements/requirements.txt
+```
+
 Para ejcutarlo en Linux simplemente usa:
 ```
 ./go-applio.sh
 ```
+O directamente si usas Nvidia como yo:
+```
+
+```
+
+El archivo Makefile deberia contener en la parte de instalacion lo siguiente:
+```
+	sudo pacman -S --needed base-devel python ffmpeg
+	pip install --upgrade setuptools wheel
+	pip install --upgrade pip
+	pip install faiss-gpu fairseq gradio ffmpeg ffmpeg-python praat-parselmouth pyworld numpy==1.23.5 numba==0.56.4 librosa==0.9.1
+	pip install -r assets/requirements/requirements.txt
+	pip install --upgrade lxml
+	sudo pacman -Syu
+	sudo pacman -S --needed aria2
+```
+
 ##### Separar voz e instrumental de una cancion
-https://vocalremover.org/es/
+Solo me dejo un intento: https://vocalremover.org/es/
 
 # Aplicaciones 
 ##### Discord 
