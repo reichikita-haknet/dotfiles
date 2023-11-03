@@ -139,7 +139,7 @@ Para que no tengas que perder el tiempo ajustando con `xrandr` y `bscp monitor` 
 
 | :warning: Nota |
 |-----------------------|
-| 1. Deberas recargar dos veces `bspwm` cada que conectes y desconectes un monitor secundario.<br/> 2. Si durante la sesion actual de `bspwm` se ha conectado mas de un monitor pero luego lo desconectas para usar solo el monitor principal, se usara `bspc monitor $sec -r` para remover el monitor secundario antes configurado y asi no habra inconvenientes a la hora de asignar todos los espacios de trabajo al monitor principal.|
+| 1. Deberas recargar dos veces `bspwm` cada que conectes y desconectes un monitor secundario.<br/> 2. Si durante la sesion actual de `bspwm` se ha conectado mas de un monitor pero luego lo desconectas para usar solo el monitor principal, se usara `bspc monitor $sec -r` para remover el monitor secundario antes configurado y asi no habra inconvenientes a la hora de asignar y ordenar todos los espacios de trabajo al monitor principal.|
 
 # Paletas de colores
 ##### Nord
@@ -183,6 +183,16 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 3. Si deseas instalar una aplicación de Python que no está empaquetada por Arch, puedes usar `pipx install xyz`, que administrará un entorno virtual para ti. Asegúrate de tener el paquete `python-pipx` instalado a través de pacman.
 
 # Utilidades
+# Dunst
+##### Configuracion
+https://dunst-project.org/documentation/#Keyboard-shortcuts-X11-only
+
+##### dunstify
+https://linuxcommandlibrary.com/man/dunstify
+
+##### dunstctl
+https://man.archlinux.org/man/dunstctl.1.en
+
 ##### Applio
 Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe` y otras cosas no especificadas, te veras en la obligacion de instalar `Python3.9.8` pero como si lo hago puede romperse muchas dependencias del sistema es mucho mejor crear un entorno virtual con la version requerida de Python:
 
