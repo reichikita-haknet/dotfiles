@@ -73,7 +73,7 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth
 ```
 
-2. Para utilizar `bluetoothctl` debes instalar:
+3. Para utilizar `bluetoothctl` debes instalar:
 ```
 sudo pacman -S bluez
 ```
