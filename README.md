@@ -73,6 +73,10 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth
 ```
 
+2. Para utilizar `bluetoothctl` debes instalar:
+```
+sudo pacman -S bluez
+```
 
 **Si te pasa como a mi que se dificulta conectar el teclado intenta usar `bluetoothctl` y en esa consola haz lo siguiente:**
 
