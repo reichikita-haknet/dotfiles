@@ -187,17 +187,23 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 3. Si deseas instalar una aplicación de Python que no está empaquetada por Arch, puedes usar `pipx install xyz`, que administrará un entorno virtual para ti. Asegúrate de tener el paquete `python-pipx` instalado a través de pacman.
 
 # Utilidades
-# Dunst
-##### Configuracion
+
+## Vim
+Para instalar Plugins primero debes instalar [Vundle](https://github.com/VundleVim/Vundle.vim), en el repositorio de github existen instrucciones.
+
+[Plugin para vistas previas de colores en css/less/sass/html](https://github.com/gko/vim-coloresque)
+
+## Dunst
+### Configuracion
 https://dunst-project.org/documentation/#Keyboard-shortcuts-X11-only
 
-##### dunstify
+### dunstify
 https://linuxcommandlibrary.com/man/dunstify
 
-##### dunstctl
+### dunstctl
 https://man.archlinux.org/man/dunstctl.1.en
 
-##### Applio
+## Applio
 Debido a que la versión mas reciente de Python no es compatible con las versiones de `torch` y `torchcrepe` y otras cosas no especificadas, te veras en la obligacion de instalar `Python3.9.8` pero como si lo hago puede romperse muchas dependencias del sistema es mucho mejor crear un entorno virtual con la version requerida de Python:
 
 Para instalar específicamente Python 3.9.8 en un entorno virtual en Arch Linux, puedes seguir estos pasos:
@@ -278,16 +284,16 @@ Solo me dejo un intento: https://vocalremover.org/es/
 
 # Aplicaciones 
 
-##### Caprine
+## Caprine
 [Caprine](https://github.com/sindresorhus/caprine) es una aplicación de Facebook Messenger no oficial y centrada en la privacidad con muchas funciones útiles.
 Para este hice un tema con una plantilla de Pywal basandome en [Caprine dracula theme](https://github.com/dracula/caprine-messenger)
 
-Activando el tema
+### Activando el tema
 1. Copia el archivo `custom.css` a `~/.config/Caprine`
 
 2. En Caprine ve a `File`/`Caprine Settings`/`Advanced`/`Custom Styles`
    
-##### Discord 
+## Discord 
 ```
 sudo pacman -S discord
 ```
@@ -299,13 +305,13 @@ sudo pacman -S noto-fonts-emoji
 Después de instalar la fuente, es posible que necesites reiniciar las aplicaciones para que puedan detectar y usar la nueva fuente
 
 # Errores comunes
-##### rog-control-center
+## rog-control-center
 A veces al parecer `systemd` no carga correctamente el demonio `asusd` por lo que simplemente reinica el servicio:
 ```
 systemctl restart asusd
 ```
 
-##### Pulseaudio
+## Pulseaudio
 A veces se para el demonio `pulseaudio`, para solucionarlo solo reinicialo
 
 1. Verifica si alguna instancia de PulseAudio está en ejecución: `pulseaudio --check`. Normalmente no imprime nada, solo el código de salida. 0 significa que está en ejecución.
