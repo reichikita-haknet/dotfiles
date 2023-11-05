@@ -277,6 +277,12 @@ El archivo Makefile deberia contener en la parte de instalacion lo siguiente:
 Solo me dejo un intento: https://vocalremover.org/es/
 
 # Aplicaciones 
+
+##### Caprine
+[Caprine](https://github.com/sindresorhus/caprine) es una aplicación de Facebook Messenger no oficial y centrada en la privacidad con muchas funciones útiles.
+Para este hice un tema con una plantilla de Pywal basandome en [Caprine dracula theme](https://github.com/dracula/caprine-messenger)
+
+
 ##### Discord 
 ```
 sudo pacman -S discord
