@@ -191,8 +191,7 @@ Si como a mi te pasa que no puedes usar pip para instalar dependencias, la razon
 ## Vim
 Para instalar Plugins primero debes instalar [Vundle](https://github.com/VundleVim/Vundle.vim), en el repositorio de github existen instrucciones.
 
-[Plugin para vistas previas de colores en css/less/sass/html](https://github.com/gko/vim-coloresque)
-
+[Plugin para vistas previas de colores en CSS](https://github.com/ap/vim-css-color)
 ## Dunst
 ### Configuracion
 https://dunst-project.org/documentation/#Keyboard-shortcuts-X11-only
