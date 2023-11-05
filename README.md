@@ -295,6 +295,12 @@ sudo pacman -S noto-fonts-emoji
 Después de instalar la fuente, es posible que necesites reiniciar las aplicaciones para que puedan detectar y usar la nueva fuente
 
 # Errores comunes
+##### rog-control-center
+A veces al parecer `systemd` no carga correctamente el demonio `asusd` por lo que simplemente reinica el servicio:
+```
+systemctl restart asusd
+```
+
 ##### Pulseaudio
 A veces se para el demonio `pulseaudio`, para solucionarlo solo reinicialo
 
