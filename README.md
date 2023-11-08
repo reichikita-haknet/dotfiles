@@ -6,6 +6,9 @@
   <img src="" alt="Monitor secundario">
 </details>
 
+# Fondos de pantalla
+Puedes ver y descargar mi carpeta `Fondos_de_pantalla` que uso por ejemplo en mi configuracion con rofi y feh desde mi nube de OneDrive: [Ir a la carpeta](https://keug-my.sharepoint.com/:f:/g/personal/tony_haknet_keug_onmicrosoft_com/El1aVaEI0yFGsr6SPTxl1jwB1aAVhspu0i24MGC3ilEU6Q?e=RSsme4)
+
 # Instalacion de controladores de NVIDIA y soporte para Asus en Arch Linux
 
 ```
