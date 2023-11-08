@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Usar variables de color actualizadas
+. "${HOME}/.cache/wal/colors.sh"
+
+# Recargar cava, necesariamente despues de llamar a las variables de color de pywal actualizadas!
+ln -sf ~/.cache/wal/config ~/.config/cava/config
+pkill -USR1 cava
+
+# Pywal con dunst actualizado
+pkill -KILL dunst
+ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+
+# Pywal con Caprine actualizado
+pkill -KILL caprine
+ln -sf ~/.cache/wal/custom.css ~/.config/Caprine/custom.css
