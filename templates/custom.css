@@ -1,0 +1,40 @@
+.x198g3q0 {{
+	color: {foreground} !important; /* Color de primer plano al seleccionar un icono del menu lateral, y de casi todos los demas iconos */
+}}
+
+.x1av1boa {{	
+	background-color: {color5} !important; /* Color de fondo al seleccionar un icono del menu o un chat */
+}}
+
+.xzsf02u {{
+	color: {color2} !important; /* Color de primer plano de casi todo el texto */
+}}
+
+.xfuq9xy {{
+	color: {color5} !important /* Color de primer plano de cada icono NO SELECCIONADO del menu lateral */;
+}}
+
+.__fb-light-mode {{
+	--positive: {color2} !important; /* Color de boton de estado de activo de un usuario */
+}}
+
+.x9f619 {{
+	box-sizing: border-box;
+	color: {color2} !important; /* Color de nombre de usuario solo en el menu de mas opciones y del icono de buscar */
+}}
+
+.x1k90msu {{
+	transition-duration: var(--fds-fast);
+	color: {color1} !important; /* Color de primer plano de todos los iconos no seleccionados en el menu lateral */
+}}
+
+.x1tlxs6b {{
+	border-top-left-radius: 18px;
+	background: {color1} !important;
+}}
+
+:root {{
+	--surface-background: {foreground} !important; /* Color de fondo de la lista de chats */
+	--primary-icon: {color5} !important; /* Color de primer plano de los iconos de llamada de voz, videollamda */
+	--messenger-card-background: transparent !important; /* Color de fondo de cada chat */
+}}
