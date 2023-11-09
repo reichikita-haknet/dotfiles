@@ -46,6 +46,11 @@ Ahora simplemente sigue el paso 5 y 6 primeros de la seccion "Instalación" de l
 
 Finalmente ejecuta **como usuario root** el lanzador de aplicaciones (super + shit + space) el programa rog-control-center para realizar tus ajustes. Puedes revisar tus ajustes en `/etc/asusd/asusd.ron`.
 
+Nota: Los paquetes `supergfxctl` y `nvidia-utils` contienen un archivo que incluye en la lista negra el módulo `nouveau`:
+![2023-11-09_145855_625763821](https://github.com/reichikita-haknet/dotfiles/assets/147787974/d8955438-d198-4ef9-aee8-615e948b391f)
+
+
+
 # Controladores de ajustes del sistema
 #### Conexion Wifi
 1. No necesitas instalar `wpa_supplicant` y `networkmanager` para usar `iwd` en Arch Linux. `iwd` es un demonio de red independiente que puede manejar la funcionalidad proporcionada por estos dos paquetes:
