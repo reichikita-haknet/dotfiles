@@ -153,6 +153,18 @@ Para que no tengas que perder el tiempo ajustando con `xrandr` y `bscp monitor` 
 |-----------------------|
 | 1. Deberas recargar dos veces `bspwm` cada que conectes y desconectes un monitor secundario.<br/> 2. Si durante la sesion actual de `bspwm` se ha conectado mas de un monitor pero luego lo desconectas para usar solo el monitor principal, se usara `bspc monitor $sec -r` para remover el monitor secundario antes configurado y asi no habra inconvenientes a la hora de asignar y ordenar todos los espacios de trabajo al monitor principal.|
 
+# Pywal
+## Pywal para Discord
+Puedes usar pywal-discord o wal-discord para crear un tema en Discord usando los colores de wal.
+
+También hay un tema discord-wal para un archivo de plantilla compatible con Vencord (especialmente notable para usuarios de Windows).
+
+https://github.com/FilipLitwora/pywal-discord: `yay -S pywal-discord-git`
+
+https://github.com/guglicap/wal-discord
+
+https://github.com/Gremious/discord-wal-theme-template
+
 # Paletas de colores
 ##### Nord
 https://www.nordtheme.com/docs/colors-and-palettes
