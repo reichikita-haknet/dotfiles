@@ -330,6 +330,13 @@ Alternativamente, puedes usar systemctl para reiniciar PulseAudio:
 1. Reinicia el servicio PulseAudio: `systemctl --user restart pulseaudio.service`.
 2. También puedes reiniciar el socket PulseAudio: `systemctl --user restart pulseaudio.socket`.
 
+# Ranger
+Si se jode la vista previa de imagenes apesar de haberla configurado en el `rc.conf`, probablemente quieras simplemente usar: 
+```
+sudo pacman -S python-pillow
+
+python -c "from PIL import Image"`
+```
 # Datitos utiles
 ## Eliminar kernel en desuso
 1. Identifica el nombre del kernel que quieres eliminar. Puedes usar el comando `uname -r` para ver el kernel que estás usando actualmente y asi asegurarte de cual NO eliminar.
