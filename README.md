@@ -6,6 +6,7 @@
   <img src="" alt="Monitor secundario">
 </details>
 
+
 # Fondos de pantalla
 Puedes ver y descargar mi carpeta `Fondos_de_pantalla` que uso por ejemplo en mi configuracion con rofi y feh desde mi nube de OneDrive: [Ir a la carpeta](https://keug-my.sharepoint.com/:f:/g/personal/tony_haknet_keug_onmicrosoft_com/El1aVaEI0yFGsr6SPTxl1jwB1aAVhspu0i24MGC3ilEU6Q?e=RSsme4)
 
@@ -154,6 +155,14 @@ Para que no tengas que perder el tiempo ajustando con `xrandr` y `bscp monitor` 
 | 1. Deberas recargar dos veces `bspwm` cada que conectes y desconectes un monitor secundario.<br/> 2. Si durante la sesion actual de `bspwm` se ha conectado mas de un monitor pero luego lo desconectas para usar solo el monitor principal, se usara `bspc monitor $sec -r` para remover el monitor secundario antes configurado y asi no habra inconvenientes a la hora de asignar y ordenar todos los espacios de trabajo al monitor principal.|
 
 # Pywal
+
+## Feh
+Bueno basicamente en mis configuraciones hago que el fondo no sea defino por wal (bandera -n) entonces lo hago con Feh!, para que cada que inicies sesion cargues tu ultimo fondo de pantalla usado con feh agrega a `.xinitrc` lo siguiente:
+```
+~/.fehbg &
+```
+Nota: Necesariamente antes de `exec`
+
 ## Pywal para Discord
 Puedes usar pywal-discord o wal-discord para crear un tema en Discord usando los colores de wal.
 
