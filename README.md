@@ -164,15 +164,18 @@ Bueno basicamente en mis configuraciones hago que el fondo no sea defino por wal
 Nota: Necesariamente antes de `exec`
 
 ## Pywal para Discord
-Puedes usar pywal-discord o wal-discord para crear un tema en Discord usando los colores de wal.
+Antes que nada deberas instalar [BetterDiscord](https://github.com/BetterDiscord/BetterDiscord), puedes hacerlo con su instalador automatico de su pagina web oficial. BetterDiscord basicamente se instala sobre tu instalacion de Discord para incluir nuevas funciones en la seccion "Ajustes de usuario" 
 
-También hay un tema discord-wal para un archivo de plantilla compatible con Vencord (especialmente notable para usuarios de Windows).
+Puedes usar scripts commo `pywal-discord` o `wal-discord` para crear un tema en Discord usando los colores de Pywal.
+
+También hay un tema `discord-wal` para un archivo de plantilla compatible con Vencord (especialmente notable para usuarios de Windows).
 
 https://github.com/FilipLitwora/pywal-discord: `yay -S pywal-discord-git`
 
 https://github.com/guglicap/wal-discord
 
 https://github.com/Gremious/discord-wal-theme-template
+
 
 # Paletas de colores
 ##### Nord
