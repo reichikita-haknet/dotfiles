@@ -315,10 +315,12 @@ Solo me dejo un intento: https://vocalremover.org/es/
 
 # Aplicaciones 
 
-## Caprine
-[Caprine](https://github.com/sindresorhus/caprine) es una aplicación de Facebook Messenger no oficial y centrada en la privacidad con muchas funciones útiles.
-Para este hice un tema con una plantilla de Pywal basandome en [Caprine dracula theme](https://github.com/dracula/caprine-messenger)
-
+### Drivers para impresora EPSON
+En mi caso tengo una L4260, simplemente:
+```
+yay -S epson-inkjet-printer-escpr
+```
+https://wiki.archlinux.org/title/CUPS/Printer-specific_problems
 ### Activando el tema
 1. Copia el archivo `custom.css` a `~/.config/Caprine`
 
