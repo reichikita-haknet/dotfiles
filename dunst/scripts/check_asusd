@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Esto no funcionara sino habilitas el servicio asusd-user
+
+# Obtener el estado del servicio
+estado=$(/usr/bin/systemctl status asusd | grep "Active:" | awk '{print $2}')
+
+# Mostrar el estado del servicio
+if [ "$estado" = "active" ]; then
+	dunstify -a Sistema -t 20000 "asusd" "Iniciado" -i ~/.config/dunst/icons/apps/denji00.png
+	# Limite de carga al 60%
+	asusctl -c 60
+else
+	dunstify -a Sistema -t 20000 "asusd" "No iniciado" -i ~/.config/dunst/icons/apps/kobeni01.png
+fi
+
