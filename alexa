@@ -1,0 +1,15 @@
+#!/bin/bash
+#Asigna a la varable 'estudio' el primer argumento y a la variable 'descanso' el segundo argumento pasado al script. Sino se proporcionan ninguno usara por defecto para la variable 'estudio' 60 min y para la varaible 'descanso' 20 min
+estudio=${1:-60}
+descanso=${2:-20}
+
+# Bucle infinito. Se detendra manualmente 
+while true; do
+echo "Tiempo de estudio: $estudio min"
+# VOZ
+# Convertir los valores de las dos variables anteriores a segundos. Por que? > Porque sleep solo funciona en segundos
+let estudio*=60
+let descanso*=60
+sleep $estudio
+dunstify -a Sistema -t 1500 "Tiempo de estudio" "$estudio" -i ~/.config/dunst/icons/apps/megumin.png
+done
