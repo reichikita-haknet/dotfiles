@@ -1,0 +1,32 @@
+[general]
+sensitivity = 50
+framerate = 60
+bar_width = 3
+bar_height = 32
+bar_spacing = 1
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = ncurses
+
+[color]
+foreground = '{foreground}'
+gradient = 7
+gradient_count = 7
+gradient_color_1 = '{color0}'
+gradient_color_2 = '{color1}'
+gradient_color_3 = '{color2}'
+gradient_color_4 = '{color3}'
+gradient_color_5 = '{color4}'
+gradient_color_6 = '{color5}'
+gradient_color_7 = '{color6}'
+
+[eq]
+1=2
+2=2
+3=1
+4=1
+5=0.5

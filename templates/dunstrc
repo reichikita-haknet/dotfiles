@@ -1,0 +1,185 @@
+[global]
+notification_limit = 0
+mouse_middle_click = context
+mouse_left_click = do_action
+mouse_right_click = close_current
+follow = keyboard
+show_age_threshold = 120
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = true
+indicate_hidden = true
+browser = /usr/bin/firefox
+always_run_script = true
+force_xinerama = false
+idle_threshold = 0
+width = 430
+height = 200
+origin = top-right
+offset= 8x46
+corner_radius = 15
+transparency = 0
+separator_height = 3
+separator_color = "{color5}"
+font = Terminus (TTF) 11
+line_height = 1
+frame_width = 3
+frame_color = "{color5}"
+padding = 12
+horizontal_padding = 15
+sort = yes
+progress_bar = true
+progress_bar_height = 9
+progress_bar_frame_width = 0
+markup = full
+format = "<b>%a</b> | %s\n%b"
+alignment = center
+word_wrap = true
+ellipsize = end
+ignore_newline = no
+icon_position = right
+min_icon_size = 74
+max_icon_size = 74
+# No funciona, por lo que tuve que usar new_icon en las diferentes reglas. Supongo que es porque deberia poner los iconos en /usr o similar.
+# icon_path = "~/.config/dunst/icons/system"
+icon_corner_radius = 12
+# En true para que las notificaciones que se han recuperado del historial no agoten el tiempo de espera automáticamente
+sticky_history = true
+history_length = 30
+# Los atajos de teclado se definen en el siguiente formato: "Modificador+tecla", donde el modificador es uno de ctrl,mod1,mod2,mod3,mod4 y tecla es cualquier tecla del teclado.
+history = mod4+h
+enable_recursive_icon_lookup = true
+# Solo para wayland
+# layer = overlay
+
+[urgency_low]
+    background = "#282c34"
+    highlight = "#6fa6e7"
+    frame_color = "#abb2bf"
+    foreground = "#abb2bf"
+    timeout = 10
+    icon = info.svg
+
+[urgency_normal]
+    background = "{background}"
+# Afecta el color de las barras de progreso
+    highlight = "{color2}"
+    frame_color = "{color3}"
+    foreground = "{foreground}"
+    timeout = 10
+    icon = info.svg
+
+[urgency_critical]
+    background = "#e06c75"
+    highlight = "#fe6c5a"
+    frame_color = "#abb2bf"
+    foreground = "#282c34"
+    timeout = 0
+    icon = urgent.svg
+
+#-------- Reglas -------#
+# Por una razon que no entiendo dunstify solo me reconoce los PNG o SVG que tengan en su nombre mayusculas y minusculas seguidas, como capslockON.png
+
+# •• Volume & Backlight
+
+[volume0]
+appname = Vol
+summary = Volume: [0-9]*
+new_icon = ~/.config/dunst/icons/system/volume1.svg
+
+[volume1]
+appname = Vol
+summary = Volume: [0-3][0-9]*
+new_icon = ~/.config/dunst/icons/system/volume1.svg
+
+[volume2]
+appname = Vol
+summary = Volume: [4-6][0-9]*
+new_icon = ~/.config/dunst/icons/system/volume2.svg
+
+[volume3]
+appname = Vol
+summary = Volume: [7-9][0-9]*
+new_icon = ~/.config/dunst/icons/system/volume3.svg
+
+[volume4]
+appname = Vol
+summary = Volume: 1[0-9][0-9]*
+new_icon = ~/.config/dunst/icons/system/volume3.svg
+
+[sound_off]
+appname = Vol
+summary = "Audio desactivado"
+new_icon = ~/.config/dunst/icons/system/sound_off.svg
+
+[sound_on]
+appname = Vol
+summary = "Audio activado"
+new_icon = ~/.config/dunst/icons/system/volume3.svg
+
+[backlight0]
+appname = System
+summary = Backlight: [0-9]*
+new_icon = ~/.config/dunst/icons/system/backlight1.svg
+
+[backlight1]
+appname = System
+summary = Backlight: [0-3][0-9]*
+new_icon = ~/.config/dunst/icons/system/backlight1.svg
+
+[backlight2]
+appname = System
+summary = Backlight: [4-6][0-9]*
+new_icon = ~/.config/dunst/icons/system/backlight2.svg
+
+[backlight3]
+appname = System
+summary = Backlight: [7-9][0-9]*
+new_icon = ~/.config/dunst/icons/system/backlight3.svg
+
+[backlight4]
+appname = System
+summary = Backlight: 1[0-9][0-9]*
+new_icon = ~/.config/dunst/icons/system/backlight3.svg
+
+
+# •• Keyboard Functions
+
+[capslock_on]
+appname = Sistema
+summary = Mayúsculas activadas
+new_icon = ~/.config/dunst/icons/system/capson.png
+
+[capslock_off]
+appname = Sistema
+summary = Mayúsculas desactivadas
+new_icon = ~/.config/dunst/icons/system/capsoff.png
+
+[pantalla_completa]
+appname = Sistema
+summary = Pantalla completa
+new_icon = ~/.config/dunst/icons/apps/yoru00.png
+
+#----------------- Reglas para aplicaciones -----------------#
+[spotify]
+desktop_entry = 
+background = "#98c379"
+foreground = "#282c34"
+
+[firefox]
+# Puedes revisar el nombre (segun tu idioma) con algo como: cat /usr/share/applications/firefox.desktop | grep -i "Firefox"
+desktop_entry = firefox
+
+[edge]
+desktop_entry = microsoft-edge
+
+[obs-studio]
+desktop_entry = com.obsproject.Studio
+
+[messenger]
+desktop_entry = caprine
+
+#------------------ Reglas para algunos scripts -----------------#
+[color_picker]
+appname = "Selector de color"
+new_icon = /tmp/preview.png

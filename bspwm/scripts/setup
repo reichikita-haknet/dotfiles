@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Usar variables de color actualizadas
+. "${HOME}/.cache/wal/colors.sh"
+
+# Recargar cava, necesariamente despues de llamar a las variables de color de pywal actualizadas!
+ln -sf ~/.cache/wal/config ~/.config/cava/config
+pkill -USR1 cava
+
+# SIGTERM le da a  un proceso la oportunidad de realizar una limpieza adecuada antes de terminar, por ejemplo, cerrar archivos abiertos, liberar memoria y realizar otras tareas necesarias antes de salir. 
+# SIGKILL en cambio para forzadamente el proceso PERO si SIGTERM puede ser ignorado por el proceso y si eso pasa SIGKILL el unico que puede detenerlo!
+
+# Pywal con dunst actualizado
+pkill -KILL dunst
+ln -sf ~/.cache/wal/dunstrc ~/.config/dunst/dunstrc
+
+# Pywal con Caprine actualizado
+pkill -KILL caprine
+ln -sf ~/.cache/wal/custom.css ~/.config/Caprine/custom.css
